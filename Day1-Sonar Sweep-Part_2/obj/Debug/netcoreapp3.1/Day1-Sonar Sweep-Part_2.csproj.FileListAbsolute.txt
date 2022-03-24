@@ -1,0 +1,14 @@
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\bin\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.exe
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\bin\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.deps.json
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\bin\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.runtimeconfig.json
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\bin\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.runtimeconfig.dev.json
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\bin\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.dll
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\bin\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.pdb
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.csproj.AssemblyReference.cache
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.AssemblyInfoInputs.cache
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.AssemblyInfo.cs
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.csproj.CoreCompileInputs.cache
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.dll
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.pdb
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day1-Sonar Sweep-Part_2\obj\Debug\netcoreapp3.1\Day1-Sonar Sweep-Part_2.genruntimeconfig.cache

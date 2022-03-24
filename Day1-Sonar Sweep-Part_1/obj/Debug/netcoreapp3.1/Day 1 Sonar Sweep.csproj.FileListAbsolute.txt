@@ -1,0 +1,14 @@
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.csproj.AssemblyReference.cache
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.AssemblyInfoInputs.cache
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.AssemblyInfo.cs
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.csproj.CoreCompileInputs.cache
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\bin\Debug\netcoreapp3.1\Day 1 Sonar Sweep.exe
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\bin\Debug\netcoreapp3.1\Day 1 Sonar Sweep.deps.json
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\bin\Debug\netcoreapp3.1\Day 1 Sonar Sweep.runtimeconfig.json
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\bin\Debug\netcoreapp3.1\Day 1 Sonar Sweep.runtimeconfig.dev.json
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\bin\Debug\netcoreapp3.1\Day 1 Sonar Sweep.dll
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\bin\Debug\netcoreapp3.1\Day 1 Sonar Sweep.pdb
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.dll
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.pdb
+C:\Users\roko0921\Documents\Personal\AdventOfCode2021\Day 1 Sonar Sweep\obj\Debug\netcoreapp3.1\Day 1 Sonar Sweep.genruntimeconfig.cache
