@@ -3,20 +3,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-char* decTo12BitBinary(unsigned int n) {
-	char* binary = malloc(sizeof(char) * 13);
-	for (int i = 1; i <= 12; i++) {
-		int k = n >> (12 - i);
-		if (k & 1)
-			binary[i - 1] = '1';
-		else
-			binary[i - 1] = '0';
-	}
-	binary[13] = '\0';
-
-	return binary;
-}
-
 unsigned int get_progressive_match(FILE* f, const unsigned int lines, bool invert) {
 	rewind(f);
 
@@ -48,7 +34,7 @@ unsigned int get_progressive_match(FILE* f, const unsigned int lines, bool inver
 		for (unsigned int i = 0; i < m_count; i++) {
 			count += m[i][bit_pos] == '1' ? 1 : 0;
 		}
-		
+
 		char common_bit = count >= (float)m_count / 2 ? 
 			(invert ? '0' : '1') : (invert ? '1' : '0');
 		
@@ -75,31 +61,6 @@ unsigned int get_progressive_match(FILE* f, const unsigned int lines, bool inver
 	}
 
 	return strtol(m[0], NULL, 2);
-
-		// char line[13];
-
-		// char best[13];
-		// unsigned int best_matches = 0;
-
-		// unsigned int i = 0;
-		// while (fgets(line, 13, f) != NULL) {
-		// 	unsigned int matches = 0;
-		// 	for (int j = 0; j < 12; j++) {
-		// 		if (line[j] == common_bits[j])
-		// 			matches++;
-		// 		else
-		// 			break;
-		// 	}
-		// 	if (matches > best_matches) {
-		// 		strncpy(best, line, 13);
-		// 		best_matches = matches;
-		// 	}
-		// 	i++;
-		// }
-
-		// printf("Best match: %s; Matches: %u\n", best, best_matches);
-
-	// return strtol(best, NULL, 2);
 }
 
 int main() {
@@ -158,7 +119,7 @@ int main() {
 
 	printf("Oxygen: %u\n", oxygen);
 	printf("CO2: %u\n", co2);
-	// printf("CO2: %u\n", b);
+	
 	printf("Oxygen * CO2: %u\n", oxygen * co2);
 
 	return 0;
