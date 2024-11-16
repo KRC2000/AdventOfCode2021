@@ -5,10 +5,10 @@ namespace cs;
 
 public class Program
 {
-	public const UInt16 BoardSize = 5;
+	public const uint BoardSize = 5;
 	
 	static List<uint> nums = [];
-	static readonly List <(UInt16, bool)[,]> boards = [];
+	static readonly List <Board> boards = [];
 
     static void Main(string[] args)
     {
@@ -16,46 +16,49 @@ public class Program
 		string ln1 = sr.ReadLine() ?? throw new Exception("Can't read a line.");
 		nums = ln1.Split(',').ToList().ConvertAll<uint>((s) => { return uint.Parse(s); });
 
-		UInt16 row = 0;
-		(UInt16, bool)[,] board = new (UInt16, bool)[BoardSize, BoardSize];
+		Board board = new();
+		uint row = 0;
 		while (true) {
 			string? s = sr.ReadLine();
 			if (s == null) break;
-			string[] ssub = s.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-			if (row == BoardSize) {
-				boards.Add(board);
-				board = new (UInt16, bool)[BoardSize, BoardSize];
-				row = 0;
-			}
+			List<uint> rowNums = s.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+								  .ToList()
+								  .ConvertAll<uint>((s) => uint.Parse(s));
 			if (s == "") continue;
 
-			for (UInt16 i = 0; i < BoardSize; i++) {
-				Console.WriteLine(ssub[i]);
-				board[row,i] = (UInt16.Parse(ssub[i]), false);
-			}
+			board.SetRow(row, rowNums);
+
 			row++;
+
+			if (row == BoardSize) {
+				boards.Add(board);
+				board = new();
+				row = 0;
+			}
 		}
 
 		sr.Close();
 
-		for (int i = 0; i < nums.Count; i++) {
-			uint num = nums[i];
-			foreach (var b in boards) {
-				for (int r = 0; r < BoardSize; r ++) {
-					for (int c = 0; c < BoardSize; c++) {
-						if (b[r, c].Item1 == num) b[r, c].Item2 = true;
-					}
-				}
+		Board? bingoBoard = null;
+		uint lastNum = 0;
+		foreach (uint num in nums) {
+			lastNum = num;
+			foreach (Board b in boards) {
+				if (b.Mark(num)) bingoBoard = b;
+				if (bingoBoard != null) break;
 			}
-
-			foreach (var b in boards) {
-				for (int r = 0; r < BoardSize; r++) {
-					// if (b[r, 0].Item2)
-				}
-			}
-
+			if (bingoBoard != null) break;
 		}
 
+		if (bingoBoard == null) {
+			Console.WriteLine("There is no winning board.");
+			return;
+		}
 
+		foreach (Board b in boards)
+			b.Print();
+
+		uint sum = bingoBoard.GetUnmarkedSum();
+		Console.WriteLine($"Final score: {sum * lastNum}");
     }
 }
