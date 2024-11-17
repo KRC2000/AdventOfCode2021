@@ -4,7 +4,7 @@ using cs;
 class Board {
 	static uint BSize => Program.BoardSize;
 
-	bool bingo = false;
+	public bool Bingo { get; private set; } = false;
 	readonly uint[,] board = new uint[BSize,BSize];
 	readonly bool[,] marks = new bool[BSize,BSize];
 	readonly uint[] marksCount = new uint[BSize * 2];
@@ -22,8 +22,8 @@ class Board {
 				marksCount[row]++;
 				marksCount[BSize + col]++;
 				if (marksCount.Contains(BSize)) {
-					bingo = true;
-					return bingo;
+					Bingo = true;
+					return Bingo;
 				}
 			}
 		}
@@ -47,7 +47,7 @@ class Board {
 				Console.ForegroundColor = ConsoleColor.Black;
 				Console.Write($"{board[row, col]:00}");
 				Console.ResetColor();
-				if (bingo) Console.BackgroundColor = ConsoleColor.White;
+				if (Bingo) Console.BackgroundColor = ConsoleColor.White;
 				if (col < BSize - 1) Console.Write("  ");
 				Console.ResetColor();
 			}

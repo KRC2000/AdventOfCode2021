@@ -39,26 +39,19 @@ public class Program
 
 		sr.Close();
 
-		Board? bingoBoard = null;
-		uint lastNum = 0;
+		bool firstBingo = false;
+		uint lastBingoScore = 0;
 		foreach (uint num in nums) {
-			lastNum = num;
 			foreach (Board b in boards) {
-				if (b.Mark(num)) bingoBoard = b;
-				if (bingoBoard != null) break;
+				if (b.Bingo || !b.Mark(num)) continue;
+				if (firstBingo == false) { 
+					Console.WriteLine($"First bingo score: {b.GetUnmarkedSum() * num}");
+					firstBingo = true;
+				}
+				lastBingoScore = b.GetUnmarkedSum() * num;
 			}
-			if (bingoBoard != null) break;
 		}
 
-		if (bingoBoard == null) {
-			Console.WriteLine("There is no winning board.");
-			return;
-		}
-
-		foreach (Board b in boards)
-			b.Print();
-
-		uint sum = bingoBoard.GetUnmarkedSum();
-		Console.WriteLine($"Final score: {sum * lastNum}");
+		Console.WriteLine($"Last bingo score: {lastBingoScore}");
     }
 }
