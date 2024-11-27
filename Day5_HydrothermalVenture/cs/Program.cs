@@ -12,7 +12,6 @@ class Line {
 
 	public List<Vector2u> GetPoints() {
 		List<Vector2u> r = [];
-		// Vector2u vec = End - Start;
 		Vector2i vec = (Vector2i)End - (Vector2i)Start;
 		Vector2i step = new(Math.Sign(vec.X), Math.Sign(vec.Y));
 		Vector2u p = Start;
@@ -44,7 +43,10 @@ class Program {
 			uint y1 = uint.Parse(start[1]);
 			uint x2 = uint.Parse(end[0]);
 			uint y2 = uint.Parse(end[1]);
-			if (x1 != x2 && y1 != y2) continue;
+			// if (x1 != x2 && y1 != y2) continue; // Only allow horizontal and vertical lines
+			// if (Math.Abs(x2 - x1) == Math.Abs(y2 - y1)) continue; // Only allow pure diagonal lines
+			if (Math.Abs(x2 - x1) != Math.Abs(y2 - y1) && 
+				x1 != x2 && y1 != y2) continue;
 
 			Line l = new() {
 				Start = new(x1, y1),
@@ -56,8 +58,6 @@ class Program {
 				else counter.Add(p, 1);
 			}
 		}
-
-		Console.WriteLine(counter.Count);
 
 		uint count = 0;
 		foreach (var p in counter) {
