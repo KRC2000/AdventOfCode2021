@@ -14,7 +14,7 @@ namespace Day_1_Sonar_Sweep
     {
         static void Main(string[] args)
         {
-            StreamReader reader = new StreamReader("input");
+            StreamReader reader = new StreamReader("../input");
             
             bool first = true;
             int previous = 0;
